@@ -91,4 +91,4 @@ GreenGrid directly supports **United Nations Sustainable Development Goals (SDGs
 - **SDG 13**: Reducing unnecessary consumption lowers the overall carbon footprint.
 
 ---
-*Built for the 1M1B AI for Sustainability Internship.*
+*Built by **Bibhukalyan Nayak** for the 1M1B AI for Sustainability Internship.*
