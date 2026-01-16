@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenGrid | Campus Energy Optimizer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <header class="header glass">
+      <div class="logo">
+        <h1>GreenGrid</h1>
+        <span class="subtitle">AI-Powered Sustainability</span>
+      </div>
+      <div class="status-indicator">
+        <span class="status-dot"></span> System Online
+      </div>
+    </header>
+
+    <div class="main-container">
+      <aside class="sidebar glass">
+        <h2>Controls</h2>
+        <div class="control-group">
+          <label for="tempSlider">Simulator Temp (°C)</label>
+          <input type="range" id="tempSlider" min="20" max="45" value="30">
+          <span id="tempValue">30°C</span>
+        </div>
+        <div class="control-group">
+          <label for="hourSlider">Time of Day</label>
+          <input type="range" id="hourSlider" min="0" max="23" value="12">
+          <span id="hourValue">12:00</span>
+        </div>
+        <button id="predictBtn" class="btn-primary">Run Simulation</button>
+
+        <div class="metric-card">
+          <h3>Predicted Load</h3>
+          <p id="predictedLoad">-- kWh</p>
+        </div>
+
+        <div class="status-panel glass-inset">
+          <h3>System Status</h3>
+          <div class="status-item">
+            <span>Streetlights</span>
+            <span id="lightStatus" class="badge">--</span>
+          </div>
+          <div class="status-item">
+            <span>AC Systems</span>
+            <span id="acStatus" class="badge">--</span>
+          </div>
+        </div>
+
+        <button id="optimizeBtn" class="btn-secondary">Optimize Grid</button>
+      </aside>
+
+      <main class="dashboard">
+        <section class="chart-section glass">
+          <div class="chart-header">
+            <h2>Real-time Campus Energy Usage</h2>
+            <div class="chart-legend">
+              <span class="dot actual"></span> Actual
+              <span class="dot predicted"></span> AI Predicted
+            </div>
+          </div>
+          <div class="chart-container">
+            <canvas id="energyChart"></canvas>
+          </div>
+        </section>
+
+        <section class="recommendations-section glass">
+          <h2>AI Recommendations</h2>
+          <div id="recommendationsList" class="cards-grid">
+            <!-- Cards injected by JS -->
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

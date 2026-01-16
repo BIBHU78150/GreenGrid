@@ -1,0 +1,10 @@
+# System and Dependency directories
+backend/venv/
+frontend/node_modules/
+__pycache__/
+*.pkl
+.DS_Store
+
+# User specified exclusions
+read_pdf.py
+Project_Guidlines.pdf
